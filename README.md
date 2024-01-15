@@ -184,3 +184,61 @@ Total Cost for 7 units: $28.00
 Total Cost for 4 units: $16.00
 
 ```
+## Files I/O and Data Handling: 
+### Task 5: 
+ **📑 Code Explanation**
+```python
+import pandas as pd
+```
+import pandas laibrary 
+
+ ```python
+   def calculate_sales_statistics(data):
+        total_revenue = (data['quantity'] * data['price']).sum()
+        average_price_per_item = data['price'].mean()
+        return total_revenue, average_price_per_item
+```
+This function takes a pandas DataFrame (data) as an argument,then calculate total revenue and average price per item from the given sales data
+
+ ```python
+  input_csv_path = 'sales_data.csv' 
+  sales_data = pd.read_csv(input_csv_path) 
+```
+Read the CSV file
+
+ ```python
+total_revenue, average_price_per_item = calculate_sales_statistics(sales_data)
+```
+Calculate total revenue and average price per item
+
+
+ ```python
+print(f"Total Revenue: ${total_revenue:.2f}")
+print(f"Average Price per Item: ${average_price_per_item:.2f}")
+
+```
+print 
+
+ ```python
+output_csv_path = 'sales_results.csv'  
+results_df = pd.DataFrame({'Total Revenue': [total_revenue], 'Average Price per Item': [average_price_per_item]})
+results_df.to_csv(output_csv_path, index=False)
+
+print(f"Results saved to '{output_csv_path}'.")
+
+```
+Save the results to a new CSV file
+**📊 In Put File**
+```
+product_name,quantity,price
+Apple,5,1.0
+Banana,3,0.5
+Orange,2,1.2
+Grape,4,2.0
+```
+**📊 Out Put File**
+```
+Total Revenue,Average Price per Item
+16.9,1.175
+
+```
