@@ -228,6 +228,7 @@ print(f"Results saved to '{output_csv_path}'.")
 
 ```
 Save the results to a new CSV file
+
 **📊 In Put File**
 ```
 product_name,quantity,price
