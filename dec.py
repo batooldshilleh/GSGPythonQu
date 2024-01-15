@@ -34,7 +34,7 @@ basket = {
     'orange': 1
 }
 
-# Calculate and print the discounted total
+
 discounted_total = calculate_discounted_total(basket, product_prices)
 print(f"Discounted Total: ${discounted_total:.2f}")
 
