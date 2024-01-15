@@ -87,3 +87,100 @@ Print
 Discounted Total: $4.68
 
 ```
+
+## Object-Oriented Programming (OOP): 
+### Task 3: 
+ **📑 Code Explanation**
+```python
+class Product:
+    def __init__(self, name, price, quantity):
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+```
+create class
+
+ ```python
+    def calculate_total(self):
+        return self.price * self.quantity
+```
+method to calculate total price
+
+ ```python
+apple_product = Product(name='banana', price=4.0, quantity=7)
+```
+an instance of the Product class
+
+
+ ```python
+print(f"Product Name: {apple_product.name}")
+print(f"Price per unit: ${apple_product.price}")
+print(f"Quantity: {apple_product.quantity}")
+print(f"Total Cost: ${apple_product.calculate_total():.2f}")
+
+```
+Access and print the attributes
+
+**📊 Out Put**
+```
+Product Name: banana
+Price per unit: $4.0
+Quantity: 7
+Total Cost: $28.00
+
+```
+### Task 4: 
+ **📑 Code Explanation**
+```python
+class Product:
+    def __init__(self, name, price, quantity):
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+```
+create class
+
+ ```python
+    def calculate_total(self):
+        return self.price * self.quantity
+```
+method to calculate total price
+
+ ```python
+  def calculate_total_cost_for_quantity(self, quantity):
+        return self.price * quantity  
+```
+method to calculate total price for quantity
+
+ ```python
+apple_product = Product(name='banana', price=4.0, quantity=7)
+```
+an instance of the Product class
+
+
+ ```python
+print(f"Product Name: {apple_product.name}")
+print(f"Price per unit: ${apple_product.price}")
+print(f"Quantity: {apple_product.quantity}")
+print(f"Total Cost for 7 units: ${apple_product.calculate_total():.2f}")
+
+```
+Access and print the attributes
+
+ ```python
+quantity_to_calculate = 4
+total_cost_for_quantity = apple_product.calculate_total_cost_for_quantity(quantity_to_calculate)
+print(f"Total Cost for {quantity_to_calculate} units: ${total_cost_for_quantity:.2f}")
+
+```
+Calculate the total cost for a specific quantity
+
+**📊 Out Put**
+```
+Product Name: banana
+Price per unit: $4.0
+Quantity: 7
+Total Cost for 7 units: $28.00
+Total Cost for 4 units: $16.00
+
+```
